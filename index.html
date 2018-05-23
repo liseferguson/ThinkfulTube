@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+    <!-- html below sets content to adjest to different devices' widths accordingly -->   
+    <meta name="viewport" content="width=device-width">
+    <!-- Accessability feature -->
+    <meta name="description" content="A simple YouTube search engine">
+    <!-- normalization -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <title>Thinkful Tube</title>
+    <!-- link to jquery and other? -->
+    <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <h1>Search videos on YouTube</h1>
+          <form action="#" class="js-search-form">
+            <label for="query"></label>
+            <input type="text" class="js-query" placeholder="enter search terms">
+            <button type="submit" role="button">Search</button>
+          </form>
+          <h2>Results</h2>
+          <div class="js-search-results"> 
+          </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
