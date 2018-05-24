@@ -19,8 +19,6 @@ function getDataFromApi(searchTerm, callback) {
 $.ajax(settings);
 }
 
-// getDataFromApi('cats', (response) =>{console.log(response)})
-
 //this function renders the results of the search including the video title, source, and number of views
 function renderResult(result){
   return `
@@ -29,7 +27,7 @@ function renderResult(result){
       <a class="js-result-name" href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">${result.snippet.title}</a> by 
       <a class="js-video-author" href="https://www.youtube.com/channel/${result.snippet.channelId}" target="_blank">${result.snippet.channelTitle}</a></h2>
       <div class="image"> 
-        <img src="${result.snippet.thumbnails.default.url}">
+        <input type="image" src="${result.snippet.thumbnails.default.url}" role="button" alt="video thumbnail">
       </div>
     </div>
   `;
@@ -39,6 +37,13 @@ function displayYouTubeSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   $('.js-search-results').html(results);
 }
+
+//this event listener listens for user to click on thumbnail, then takes them to the video link
+//$(function(){
+//  $(.image).click(function(event){
+
+ // })
+//})
 
 function watchSubmit() {
   $('.js-search-form').submit(event => {
