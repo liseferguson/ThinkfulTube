@@ -27,9 +27,9 @@ function renderResult(result){
   return `
     <div>
       <h2>
-      <a class="js-result-name" href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">${result.snippet.title}</a> by 
+      <a class="js-result-name" href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">${result.snippet.title}</a> by
       <a class="js-video-author" href="https://www.youtube.com/channel/${result.snippet.channelId}" target="_blank">${result.snippet.channelTitle}</a></h2>
-      <div class="image"> 
+      <div class="image">
         <a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank"><input type="image" class="thumbnail" src="${result.snippet.thumbnails.default.url}" role="button" alt="video thumbnail">
       </a>
     </div>
